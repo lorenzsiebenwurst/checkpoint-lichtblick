@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -19,7 +25,7 @@ body {
 
 .header-nav {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   justify-content: space-between;
   align-items: center;
@@ -35,5 +41,68 @@ body {
 }
 
 .mountains {
-  max-width: 100%;
+  width: 100%;
+}
+
+.site-logo {
+  max-width: 20%;
+}
+
+.quote-header {
+  font-size: 4rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quote {
+  margin-top: 0;
+  margin-right: 3rem;
+  font-size: 2.5rem;
+  line-height: 1.6;
+}
+
+.top-section {
+  background-color: #f3f3f3;
+  padding-bottom: 1rem;
+}
+.pink-background {
+  background-color: pink;
+}
+
+.section-header {
+  font-size: 3rem;
+}
+
+.section-text {
+  font-size: 2rem;
+  margin-top: rem;
+  line-height: 1.8;
+}
+
+main > * + * {
+  margin-top: 19rem;
+}
+
+.section {
+  text-align: center;
+  padding: 8rem 0;
+}
+
+.section-button {
+  padding: 1rem 2rem;
+
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.article {
+  text-align: center;
+}
+
+.blue-background {
+  background-color: lightseagreen;
 }
