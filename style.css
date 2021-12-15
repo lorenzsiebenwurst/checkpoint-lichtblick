@@ -19,6 +19,7 @@ h4 {
 body {
   --text-color: black;
   --background-color: white;
+  --footer-background-color: black;
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -65,6 +66,7 @@ body {
 .top-section {
   background-color: #f3f3f3;
   padding-bottom: 1rem;
+  margin-bottom: 18rem;
 }
 .pink-background {
   background-color: pink;
@@ -72,30 +74,32 @@ body {
 
 .section-header {
   font-size: 3rem;
+  margin-bottom: 0.25rem;
 }
 
 .section-text {
   font-size: 2rem;
-  margin-top: rem;
+  margin-bottom: 5rem;
   line-height: 1.8;
 }
 
 main > * + * {
-  margin-top: 19rem;
+  margin-top: 8rem;
 }
 
 .section {
   text-align: center;
   padding: 8rem 0;
+  /*padding nach Button zu klein*/
 }
 
 .section-button {
   padding: 1rem 2rem;
-
+  font-weight: bold;
   font-size: 2.5rem;
   text-decoration: none;
   color: var(--text-color);
-  border: 5px solid black;
+  border: 6px solid black;
   border-radius: 10px;
 }
 
@@ -103,6 +107,71 @@ main > * + * {
   text-align: center;
 }
 
-.blue-background {
-  background-color: lightseagreen;
+.green-background {
+  background-color: #8aa090;
+}
+
+.article > * + * {
+  padding: 3rem 0;
+  margin: 3rem 0;
+}
+
+.article-section {
+  border: 6px solid grey;
+  border-radius: 20px;
+  text-align: left;
+  padding: 1rem 1rem 3rem 1.5rem;
+  margin: 2rem;
+}
+
+.article-section-header {
+  font-size: 2.5rem;
+}
+
+.article-section-text {
+  font-size: 2rem;
+}
+
+.article-section-button {
+  font-size: 2.2rem;
+  color: var(--text-color);
+
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 5px solid black;
+  padding-bottom: 0.25rem;
+}
+
+.article-section-image {
+  width: 106.5%;
+  position: relative;
+  left: -3.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: -1;
+}
+
+.footer {
+  background-color: var(--footer-background-color);
+  text-align: center;
+}
+
+.footer-list {
+  color: var(--text-color);
+  padding: 8rem 0;
+  font-size: 1.5rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--background-color);
+  line-height: 4;
+  border-bottom: 2px solid var(--background-color);
+  padding-bottom: 0.15rem;
+}
+
+.copyright {
+  color: grey;
+  padding-bottom: 4rem;
+  font-size: 1rem;
 }
