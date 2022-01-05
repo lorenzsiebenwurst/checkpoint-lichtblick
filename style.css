@@ -37,7 +37,8 @@ body {
 
 .nav-link {
   padding: 0.25rem 0.5rem;
-  font-size: 2rem;
+  font-size: 0.75rem;
+
   color: var(--text-color);
   text-decoration: none;
   margin-top: 1rem;
@@ -54,54 +55,55 @@ body {
 }
 
 .quote-header {
-  font-size: 4rem;
-  margin: 2rem 1rem 1rem 2rem;
+  font-size: 1.5rem;
+  margin: 0.75rem 0.4rem 0.75rem 0.4rem;
 }
 
 .quote {
-  margin-left: 2rem;
-  font-size: 2.5rem;
+  margin-left: 0.4rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
 .top-section {
   background-color: #f3f3f3;
-  padding-bottom: 1rem;
-  margin-bottom: 18rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 4rem;
 }
 .pink-background {
   background-color: pink;
 }
 
 .section-header {
-  font-size: 3rem;
+  font-size: 1.1rem;
   margin-bottom: 0.25rem;
 }
 
 .section-text {
-  font-size: 2rem;
-  margin-bottom: 5rem;
+  font-size: 0.75rem;
+  margin-bottom: 1.9rem;
   line-height: 1.8;
+  margin: 1rem 2rem;
 }
 
 main > * + * {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 .section {
   text-align: center;
-  padding: 8rem 0;
+  padding: 3rem 0;
   /*padding nach Button zu klein*/
 }
 
 .section-button {
-  padding: 1rem 2rem;
+  padding: 0.4rem 0.7rem;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1rem;
   text-decoration: none;
   color: var(--text-color);
-  border: 6px solid black;
-  border-radius: 10px;
+  border: 3px solid black;
+  border-radius: 8px;
 }
 
 .article {
@@ -113,12 +115,12 @@ main > * + * {
 }
 
 .article > * + * {
-  padding: 1rem 0;
-  margin: 1rem 0;
+  padding: 0.4rem 0;
+  margin: 0.4rem 0;
 }
 
 .article-section {
-  border: 6px solid grey;
+  border: 3px solid grey;
   border-radius: 20px;
   text-align: left;
   padding: 1rem 1rem 3rem 1.5rem;
@@ -126,27 +128,27 @@ main > * + * {
 }
 
 .article-section-header {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .article-section-text {
-  font-size: 2rem;
+  font-size: 0.75rem;
 }
 
 .article-section-button {
-  font-size: 2.2rem;
+  font-size: 0.9rem;
   color: var(--text-color);
 
   text-decoration: none;
   font-weight: bold;
-  border-bottom: 5px solid black;
-  padding-bottom: 0.25rem;
+  border-bottom: 3px solid black;
+  padding-bottom: 0.1rem;
 }
 
 .article-section-image {
-  width: 106%;
+  width: 117%;
   position: relative;
-  left: -3rem;
+  left: -2.6rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: -1;
@@ -155,19 +157,19 @@ main > * + * {
 .footer {
   background-color: var(--footer-background-color);
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .footer-list {
   color: var(--text-color);
-  padding: 8rem 0;
-  font-size: 1.5rem;
+  padding: 2.5rem 0;
+  font-size: 0.8rem;
 }
 
 .footer-link {
   text-decoration: none;
   color: var(--background-color);
-  line-height: 4;
+  line-height: 3;
   border-bottom: 2px solid var(--background-color);
   padding-bottom: 0.15rem;
 }
@@ -175,7 +177,8 @@ main > * + * {
 .copyright {
   color: grey;
   padding-bottom: 4rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media (min-width: 992px) {
@@ -190,6 +193,7 @@ main > * + * {
   }
 
   .header-nav {
+    align-content: flex-end;
     /*muss nach rechts geschoben werden*/
   }
 
@@ -200,10 +204,60 @@ main > * + * {
   .top-section {
     color: var(--header-desktop-text-color);
     background-image: url(/images/mountains.jpg);
-    background-position: center;
+    background-position: center center;
     background-size: cover;
+  }
+  .quote-header {
+    padding: 20rem 40rem 0 5rem;
+    font-size: 4rem;
+  }
+
+  .quote {
+    padding: 0 45rem 20rem 5rem;
+    font-size: 1.5rem;
   }
   .mountains {
     display: none;
+  }
+
+  .article-div-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 8rem;
+  }
+
+  .section-header {
+    margin: 3rem 15rem 0rem 15rem;
+    font-size: 2.5rem;
+  }
+
+  .section-text {
+    margin: 1.5rem 15rem 3rem 15rem;
+    font-size: 1.5rem;
+  }
+
+  .section-button {
+    font-size: 1.5rem;
+  }
+
+  .article-section-image {
+    width: 108%;
+
+    /*höhe der Bilder muss unterschiedlich sein*/
+    background-size: cover;
+    height: 50vmin;
+  }
+
+  .footer-list {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+    margin: 1rem;
   }
 }
