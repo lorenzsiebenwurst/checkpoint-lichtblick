@@ -146,7 +146,7 @@ main > * + * {
 }
 
 .article-section-image {
-  width: 117%;
+  width: 115%;
   position: relative;
   left: -2.6rem;
   border-top-left-radius: 20px;
@@ -182,19 +182,14 @@ main > * + * {
 }
 
 @media (min-width: 992px) {
-  .header {
-    display: flex;
-    align-items: center;
-  }
-
   .site-logo {
     max-width: 15%;
     margin-left: 3rem;
   }
+  .header {
+    display: flex;
 
-  .header-nav {
-    align-content: flex-end;
-    /*muss nach rechts geschoben werden*/
+    /*nav in die Mitte*/
   }
 
   .nav-link {
@@ -223,7 +218,8 @@ main > * + * {
   .article-div-section {
     display: flex;
     flex-direction: row;
-    margin: 0 8rem;
+    margin: 0 15rem;
+    align-items: flex-start;
   }
 
   .section-header {
@@ -241,17 +237,24 @@ main > * + * {
   }
 
   .article-section-image {
-    width: 108%;
+    width: 110%;
 
     /*höhe der Bilder muss unterschiedlich sein*/
     background-size: cover;
     height: 50vmin;
   }
 
+  .article-section-header {
+    font-size: 1.4rem;
+  }
+
+  .article-section-text {
+    font-size: 1rem;
+  }
+
   .footer-list {
     text-align: center;
-    margin: 0;
-    padding: 0;
+
     font-size: 1rem;
   }
 
