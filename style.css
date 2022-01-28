@@ -27,36 +27,99 @@ body {
   margin: 0;
 }
 
-.header-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  justify-content: space-between;
-  align-items: center;
+li {
+  list-style: none;
 }
 
-.nav-link {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-
-  color: var(--text-color);
-  text-decoration: none;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+@media (min-width: 992px) {
+  li {
+    display: inline;
+    margin: 1rem;
+  }
+}
+main > * + * {
+  margin-top: 6rem;
 }
 
-.mountains {
-  width: 100%;
-}
+/*****header******/
 
 .site-logo {
   max-width: 20%;
   margin: 1.5rem;
 }
 
+@media (min-width: 992px) {
+  .site-logo {
+    max-width: 15%;
+    margin-left: 3rem;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .header {
+    display: flex;
+
+    /*nav in die Mitte*/
+  }
+}
+
+.nav-link {
+  padding: 0.25rem 2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+}
+
+/******catching-section*****/
+
+.catching-section {
+  background-color: #f3f3f3;
+  padding-bottom: 0.4rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 992px) {
+  .catching-section {
+    color: var(--header-desktop-text-color);
+    background-image: url(/images/mountains.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.mountains {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .mountains {
+    display: none;
+  }
+}
+
 .quote-header {
   font-size: 1.5rem;
-  margin: 0.75rem 0.4rem 0.75rem 0.4rem;
+  margin: 0.75rem 0.4rem;
+}
+@media (min-width: 992px) {
+  .quote-header {
+    padding: 20rem 40rem 0 5rem;
+    font-size: 4rem;
+  }
 }
 
 .quote {
@@ -64,21 +127,38 @@ body {
   font-size: 1rem;
   line-height: 1.6;
 }
-
-.top-section {
-  background-color: #f3f3f3;
-  padding-bottom: 0.4rem;
-  margin-bottom: 4rem;
+@media (min-width: 992px) {
+  .quote {
+    padding: 0 45rem 20rem 5rem;
+    font-size: 1.5rem;
+  }
 }
-.pink-background {
+
+/*****section*******/
+
+.section--pink {
   background-color: pink;
 }
 
+.section--green {
+  background-color: #8aa090;
+}
+.section {
+  text-align: center;
+
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
 .section-header {
   font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+  margin: 0.25rem 0;
 }
-
+@media (min-width: 992px) {
+  .section-header {
+    margin: 3rem 15rem 0rem 15rem;
+    font-size: 2.5rem;
+  }
+}
 .section-text {
   font-size: 0.75rem;
   margin-bottom: 1.9rem;
@@ -86,18 +166,16 @@ body {
   margin: 1rem 2rem;
 }
 
-main > * + * {
-  margin-top: 6rem;
-}
-
-.section {
-  text-align: center;
-  padding: 3rem 0;
-  /*padding nach Button zu klein*/
+@media (min-width: 992px) {
+  .section-text {
+    margin: 1.5rem 15rem 3rem 15rem;
+    font-size: 1.5rem;
+  }
 }
 
 .section-button {
   padding: 0.4rem 0.7rem;
+
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
@@ -106,53 +184,73 @@ main > * + * {
   border-radius: 8px;
 }
 
-.article {
+@media (min-width: 992px) {
+  .section-button {
+    font-size: 1.5rem;
+  }
+}
+
+/******section-group******/
+
+@media (min-width: 992px) {
+  .part-section-div {
+    display: flex;
+    flex-direction: row;
+    margin: 0 7rem;
+    align-items: flex-start;
+  }
+}
+
+.section-group-quote {
   text-align: center;
 }
 
-.green-background {
-  background-color: #8aa090;
+.part-section {
+  margin: 3rem 1rem;
+  padding: 0.5rem;
+  border: 2px solid grey;
+  border-radius: 10px;
 }
 
-.article > * + * {
-  padding: 0.4rem 0;
-  margin: 0.4rem 0;
+.part-section-image {
+  position: relative;
+  left: -17px;
+  width: 105%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: -1;
 }
 
-.article-section {
-  border: 3px solid grey;
-  border-radius: 20px;
-  text-align: left;
-  padding: 1rem 1rem 3rem 1.5rem;
-  margin: 2rem;
+@media (min-width: 776px) {
+  .part-section-image {
+    width: 102%;
+  }
 }
 
-.article-section-header {
+@media (min-width: 992px) {
+  .part-section-image {
+    width: auto;
+    max-height: 50vmin;
+  }
+}
+
+.part-section-header {
+  font-size: 1.1rem;
+}
+
+.part-section-text {
   font-size: 1rem;
 }
 
-.article-section-text {
-  font-size: 0.75rem;
-}
-
-.article-section-button {
-  font-size: 0.9rem;
+.part-section-button {
   color: var(--text-color);
-
-  text-decoration: none;
   font-weight: bold;
-  border-bottom: 3px solid black;
-  padding-bottom: 0.1rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--text-color);
+  /*Niko Fragen wieso margin nur links und rechts angezeigt wird bei z.B margin: 3rem;*/
 }
 
-.article-section-image {
-  width: 115%;
-  position: relative;
-  left: -2.6rem;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  z-index: -1;
-}
+/******footer*****/
 
 .footer {
   background-color: var(--footer-background-color);
@@ -164,6 +262,13 @@ main > * + * {
   color: var(--text-color);
   padding: 2.5rem 0;
   font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  .footer-list {
+    text-align: center;
+
+    font-size: 1rem;
+  }
 }
 
 .footer-link {
@@ -179,88 +284,4 @@ main > * + * {
   padding-bottom: 4rem;
   font-size: 0.8rem;
   margin: 0;
-}
-
-@media (min-width: 992px) {
-  .site-logo {
-    max-width: 15%;
-    margin-left: 3rem;
-  }
-  .header {
-    display: flex;
-
-    /*nav in die Mitte*/
-  }
-
-  .nav-link {
-    font-size: 1.5rem;
-  }
-
-  .top-section {
-    color: var(--header-desktop-text-color);
-    background-image: url(/images/mountains.jpg);
-    background-position: center center;
-    background-size: cover;
-  }
-  .quote-header {
-    padding: 20rem 40rem 0 5rem;
-    font-size: 4rem;
-  }
-
-  .quote {
-    padding: 0 45rem 20rem 5rem;
-    font-size: 1.5rem;
-  }
-  .mountains {
-    display: none;
-  }
-
-  .article-div-section {
-    display: flex;
-    flex-direction: row;
-    margin: 0 15rem;
-    align-items: flex-start;
-  }
-
-  .section-header {
-    margin: 3rem 15rem 0rem 15rem;
-    font-size: 2.5rem;
-  }
-
-  .section-text {
-    margin: 1.5rem 15rem 3rem 15rem;
-    font-size: 1.5rem;
-  }
-
-  .section-button {
-    font-size: 1.5rem;
-  }
-
-  .article-section-image {
-    width: 110%;
-
-    /*höhe der Bilder muss unterschiedlich sein*/
-    background-size: cover;
-    height: 50vmin;
-  }
-
-  .article-section-header {
-    font-size: 1.4rem;
-  }
-
-  .article-section-text {
-    font-size: 1rem;
-  }
-
-  .footer-list {
-    text-align: center;
-
-    font-size: 1rem;
-  }
-
-  li {
-    display: inline;
-    list-style: none;
-    margin: 1rem;
-  }
 }
