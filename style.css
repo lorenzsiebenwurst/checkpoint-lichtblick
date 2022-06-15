@@ -1,0 +1,287 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  --text-color: black;
+  --background-color: white;
+  --footer-background-color: black;
+  --header-desktop-text-color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 992px) {
+  li {
+    display: inline;
+    margin: 1rem;
+  }
+}
+main > * + * {
+  margin-top: 6rem;
+}
+
+/*****header******/
+
+.site-logo {
+  max-width: 20%;
+  margin: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .site-logo {
+    max-width: 15%;
+    margin-left: 3rem;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .header {
+    display: flex;
+
+    /*nav in die Mitte*/
+  }
+}
+
+.nav-link {
+  padding: 0.25rem 2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+}
+
+/******catching-section*****/
+
+.catching-section {
+  background-color: #f3f3f3;
+  padding-bottom: 0.4rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 992px) {
+  .catching-section {
+    color: var(--header-desktop-text-color);
+    background-image: url(/images/mountains.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.mountains {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .mountains {
+    display: none;
+  }
+}
+
+.quote-header {
+  font-size: 1.5rem;
+  margin: 0.75rem 0.4rem;
+}
+@media (min-width: 992px) {
+  .quote-header {
+    padding: 20rem 40rem 0 5rem;
+    font-size: 4rem;
+  }
+}
+
+.quote {
+  margin-left: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (min-width: 992px) {
+  .quote {
+    padding: 0 45rem 20rem 5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/*****section*******/
+
+.section--pink {
+  background-color: pink;
+}
+
+.section--green {
+  background-color: #8aa090;
+}
+.section {
+  text-align: center;
+
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+.section-header {
+  font-size: 1.1rem;
+  margin: 0.25rem 0;
+}
+@media (min-width: 992px) {
+  .section-header {
+    margin: 3rem 15rem 0rem 15rem;
+    font-size: 2.5rem;
+  }
+}
+.section-text {
+  font-size: 0.75rem;
+  margin-bottom: 1.9rem;
+  line-height: 1.8;
+  margin: 1rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .section-text {
+    margin: 1.5rem 15rem 3rem 15rem;
+    font-size: 1.5rem;
+  }
+}
+
+.section-button {
+  padding: 0.4rem 0.7rem;
+
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 3px solid black;
+  border-radius: 8px;
+}
+
+@media (min-width: 992px) {
+  .section-button {
+    font-size: 1.5rem;
+  }
+}
+
+/******section-group******/
+
+@media (min-width: 992px) {
+  .part-section-div {
+    display: flex;
+    flex-direction: row;
+    margin: 0 7rem;
+    align-items: flex-start;
+  }
+}
+
+.section-group-quote {
+  text-align: center;
+}
+
+.part-section {
+  margin: 3rem 1rem;
+  padding: 0.5rem;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+
+.part-section-image {
+  position: relative;
+  left: -17px;
+  width: 105%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: -1;
+}
+
+@media (min-width: 776px) {
+  .part-section-image {
+    width: 102%;
+  }
+}
+
+@media (min-width: 992px) {
+  .part-section-image {
+    width: auto;
+    max-height: 50vmin;
+  }
+}
+
+.part-section-header {
+  font-size: 1.1rem;
+}
+
+.part-section-text {
+  font-size: 1rem;
+}
+
+.part-section-button {
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid var(--text-color);
+  /*Niko Fragen wieso margin nur links und rechts angezeigt wird bei z.B margin: 3rem;*/
+}
+
+/******footer*****/
+
+.footer {
+  background-color: var(--footer-background-color);
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-list {
+  color: var(--text-color);
+  padding: 2.5rem 0;
+  font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  .footer-list {
+    text-align: center;
+
+    font-size: 1rem;
+  }
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--background-color);
+  line-height: 3;
+  border-bottom: 2px solid var(--background-color);
+  padding-bottom: 0.15rem;
+}
+
+.copyright {
+  color: grey;
+  padding-bottom: 4rem;
+  font-size: 0.8rem;
+  margin: 0;
+}
